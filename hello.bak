@@ -1,0 +1,71 @@
+package main
+
+import (
+	"fmt"
+)
+
+func eatTacos() {
+	fmt.Println("Yum!")
+}
+
+func ret2Values(a int8, b uint8) (int8, uint8) {
+	return a, b
+}
+
+func greeting(prefix string) func(string) string {
+	return func(name string) string {
+		return fmt.Sprintf("%s, %s", prefix, name) 
+	}
+}
+
+func makeOperation(param1, param2 uint) uint {
+	defer fmt.Println("The operation was successful")
+	return param1 + param2
+}
+
+func coco() {
+
+ 	myNewValue := makeOperation(5,3)
+	fmt.Print(myNewValue)
+
+	// helloGreet := greeting("Hello")
+	// goodbyeGreet := greeting("Goodbye")
+
+	// fmt.Println(helloGreet("Arslane"))
+	// fmt.Println(goodbyeGreet("Kelly"))
+	
+	// array := [4]int {1,2,3,4}
+	// array = [...]int{3,4,2,1}	
+
+	// fmt.Scan(&array[1])
+	
+	// if total := array[1] + 5; total >= 8 {
+	// 	fmt.Println(total)
+	// } else {
+	// 	fmt.Println("Less than 7")
+	// }
+
+	// switch fmt.Scan(&test); test {
+	// case 1:
+	// 	fmt.Println("The one and only")
+	// case 2:
+	// 	fmt.Println("Any other number will do it")
+	// default: 
+	// 	fmt.Println("It's a number")
+	// }
+	
+	// randomNumber := rand.Int()
+	// otherRandomNumber := rand.Intn(100)
+	// fmt.Println(randomNumber, otherRandomNumber)
+
+	// rand.NewSource(time.Now().UnixNano())
+	// randNumber := rand.Intn(100)
+	// for i := 0; i < randNumber; i++ {
+	// 	fmt.Println(i)
+	// }
+		
+	// rand.NewSource(time.Now().UnixNano())
+	// fmt.Println(ret2Values(5,125))
+
+	
+}
